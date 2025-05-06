@@ -2,13 +2,9 @@
 set -e
 
 sudo apt-get update
-sudo apt-get install -y software-properties-common build-essential zlib1g-dev
+sudo apt-get install ruby-full build-essential zlib1g-dev
 
-sudo apt-add-repository -y ppa:brightbox/ruby-ng
-sudo apt-get update
-sudo apt-get install -y ruby3.1 ruby3.1-dev
-
-sudo gem install bundler jekyll webrick --no-document
+sudo gem install jekyll bundler webrick
 
 bundle config set path 'vendor/bundle'
 
